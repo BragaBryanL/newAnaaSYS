@@ -1,0 +1,263 @@
+/* Layout wrapper for sidebar + main content */
+.department-wrapper {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  background: #c2d0e5;
+  overflow: hidden;
+}
+
+/* Sidebar fixed width */
+.sidebar {
+  width: 240px; /* fixed sidebar width */
+  background-color: #222831;
+  color: white;
+  height: 100vh;
+  flex-shrink: 0;
+}
+
+/* Main content area fills remaining space */
+.department-content {
+  flex-grow: 1;
+  padding: 20px 30px;
+  overflow-y: auto;
+  height: 100vh;
+  box-sizing: border-box;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Controls above the table */
+.dept-controls {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+.dept-filter {
+  padding: 6px 10px;
+  margin: 10px 0;
+  font-size: 1rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.faculty-search {
+  padding: 0.5rem;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  min-width: 180px;
+}
+
+.export-btn {
+  background: #007bff;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1.2rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+.export-btn:hover {
+  background: #0056b3;
+}
+
+/* Department description */
+.dept-description {
+  background: #f5f5f5;
+  padding: 0.7rem 1.2rem;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+/* Overview cards */
+.dept-overview-cards {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+.dept-card {
+  background: #f5f5f5;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  font-weight: bold;
+  min-width: 100px;
+  text-align: center;
+}
+.dept-card.active { color: #2ecc71; }
+.dept-card.busy { color: #e74c3c; }
+.dept-card.offline { color: #95a5a6; }
+
+/* Pie chart container */
+.dept-piechart-container {
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto 1.5rem auto;
+}
+
+/* Table styles */
+.faculty-dept-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  background: rgb(255, 255, 255);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+.faculty-dept-table th,
+.faculty-dept-table td {
+  padding: 12px 16px;
+  text-align: center;
+  border-bottom: 1px solid #eee;
+}
+
+.faculty-info-cell {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-align: left;
+}
+
+.faculty-photo {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid #ccc;
+}
+
+.faculty-photo-placeholder {
+  width: 60px;
+  height: 60px;
+  background: #ddd;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: #555;
+}
+
+.faculty-name {
+  display: flex;
+  flex-direction: column;
+}
+
+.titles {
+  font-size: 0.85em;
+  color: #555;
+}
+
+.status-badge {
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 0.85em;
+  font-weight: bold;
+  color: white;
+  text-transform: capitalize;
+}
+.status-badge.active {
+  background-color: #2ecc71; /* green */
+}
+.status-badge.busy {
+  background-color: #e74c3c; /* red */
+}
+.status-badge.offline {
+  background-color: #95a5a6; /* gray */
+}
+
+/* Quick action buttons */
+.action-btn {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  margin-right: 0.5rem;
+}
+.action-btn:last-child { margin-right: 0; }
+
+/* Clickable department link */
+.dept-link:hover {
+  text-decoration: underline;
+  color: #0056b3;
+}
+
+/* Responsive design */
+@media (max-width: 900px) {
+  .dept-overview-cards { flex-direction: column; }
+  .dept-piechart-container { max-width: 100%; }
+}
+@media (max-width: 600px) {
+  .faculty-dept-table th, .faculty-dept-table td { font-size: 0.95rem; }
+  .dept-controls { flex-direction: column; gap: 0.5rem; }
+}
+
+
+/* Top row: overview cards + pie chart side by side */
+.dept-top-row {
+  display: flex;
+  gap: 2.5rem;
+  align-items: flex-start;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+.dept-overview-cards {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+.dept-card {
+  background: #f5f5f5;
+  padding: 1.2rem 2.2rem;
+  border-radius: 14px;
+  font-weight: bold;
+  min-width: 120px;
+  text-align: center;
+  border: 2px solid #eee;
+  transition: background 0.2s, color 0.2s, border 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  cursor: pointer;
+  margin-bottom: 0.5rem;
+}
+.dept-card.selected {
+  box-shadow: 0 4px 16px rgba(0,123,255,0.10);
+  border-width: 2.5px;
+}
+
+/* Pie chart container (enlarged and aligned) */
+.dept-piechart-container {
+  width: 100%;
+  max-width: 350px;
+  min-width: 220px;
+  margin: 0 0 1.5rem 0;
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  padding: 1.2rem 0.5rem 0.5rem 0.5rem;
+}
+
+/* Responsive: stack cards and chart vertically on small screens */
+@media (max-width: 1100px) {
+  .dept-top-row {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1.5rem;
+  }
+  .dept-piechart-container {
+    margin: 0 auto 1.5rem auto;
+  }
+}
+/* Table row hover effect */
+.faculty-dept-table tr {
+  transition: background 0.18s;
+}
+.faculty-dept-table tr:hover {
+  background: #f0f8ff;
+}

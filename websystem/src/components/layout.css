@@ -1,0 +1,8 @@
+/* layout.css */
+.page-wrapper {
+  padding: 30px;
+  margin-left: 260px; /* space for sidebar */
+  min-height: 100vh;
+  background: #f0f4ff;
+  box-sizing: border-box;
+}

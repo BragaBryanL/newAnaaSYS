@@ -1,0 +1,344 @@
+/* Sidebar */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 250px;
+  background-color: #839fc9;
+  color: white;
+  transition: transform 0.3s ease-in-out;
+  z-index: 1000;
+}
+
+.sidebar.collapsed {
+  transform: translateX(-100%);
+}
+
+/* Toggle Button */
+.toggle-btn {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 1100;
+  background-color: #1565c0;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+@media (min-width: 769px) {
+  .toggle-btn {
+    display: none;
+  }
+}
+
+/* Wrapper */
+.home-wrapper {
+  margin-left: 250px;
+  padding: 30px 40px;
+  width: calc(100vw - 250px);
+  height: 100vh;
+  background: linear-gradient(145deg, #e8f0fe, #c9daf8);
+  border-radius: 16px 0 0 16px;
+  box-shadow: 0 20px 40px rgba(33, 150, 243, 0.15);
+  color: #1a237e;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  box-sizing: border-box;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  transition: margin-left 0.3s ease, width 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.home-wrapper.sidebar-collapsed {
+  margin-left: 0;
+  width: 100vw;
+}
+
+/* Header */
+.home-header {
+  text-align: center;
+  padding: 40px 0 32px 0;
+  margin-bottom: 32px;
+  border-radius: 18px;
+  background: linear-gradient(90deg, #e3f0ff 0%, #bbdefb 100%);
+  box-shadow: 0 4px 24px rgba(21, 101, 192, 0.10);
+  border-bottom: 3px solid #90caf9;
+}
+
+.home-header h1 {
+  margin-bottom: 10px;
+  font-weight: 800;
+  font-size: 2.7rem;
+  color: #1565c0;
+  letter-spacing: 1px;
+  text-shadow: 0 2px 8px rgba(33, 150, 243, 0.08);
+}
+
+.home-header p {
+  font-size: 1.2rem;
+  color: #2e5984;
+  margin: 0;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+/* Cards */
+.home-cards {
+  display: flex;
+  justify-content: space-between;
+  margin: 40px 0;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.card {
+  flex: 1 1 28%;
+  background: #bbdefb;
+  border-radius: 12px;
+  padding: 25px 20px;
+  box-shadow: 0 5px 15px rgba(21, 101, 192, 0.2);
+  transition: transform 0.25s ease;
+  cursor: default;
+  min-width: 220px;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+}
+
+.card h3 {
+  margin-bottom: 15px;
+  font-size: 1.3rem;
+  color: #0d47a1;
+}
+
+.number {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #0d47a1;
+  text-align: center;
+}
+
+/* Info Section */
+.home-info {
+  background: #bbdefb;
+  padding: 25px 30px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(21, 101, 192, 0.15);
+}
+
+.home-info h2 {
+  margin-bottom: 15px;
+  color: #0d47a1;
+  font-weight: 700;
+}
+
+.home-info ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  color: #274690;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* 3 Tables Grid */
+.status-grid {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+/* Faculty Status Overview - Color Boxes */
+.status-boxes {
+  gap: 2.5rem;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  display: flex;
+  width: 100%;
+}
+.status-box {
+  width: 160px;
+  height: 160px;
+  border-radius: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 4.5rem;
+  font-weight: bold;
+  color: #fff;
+  box-shadow: 0 6px 24px rgba(0,0,0,0.13);
+  transition: transform 0.15s;
+}
+.status-box:hover {
+  transform: scale(1.09);
+}
+.active-status { background: #2ecc71; }
+.busy-status { background: #e74c3c; }
+.offline-status { background: #95a5a6; }
+
+/* Remove legend */
+.status-legend,
+.legend-box {
+  display: none !important;
+}
+
+.status-table {
+  flex: 1 1 300px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  background-color: #fff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-top: 20px;
+}
+
+.status-table:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
+}
+
+.status-table h3 {
+  margin: 0;
+  padding: 0.75rem;
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.status-table.active h3 {
+  background-color: #28a745;
+}
+
+.status-table.busy h3 {
+  background-color: #dc3545;
+}
+
+.status-table.offline h3 {
+  background-color: #6c757d;
+}
+
+.status-table table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #f9f9f9;
+}
+
+.status-table th,
+.status-table td {
+  padding: 1rem;
+  border: 1px solid #e0e0e0;
+  text-align: center;
+  font-size: 1rem;
+  color: #333;
+}
+
+.status-table th {
+  background-color: #f1f1f1;
+  font-weight: 600;
+  color: #444;
+}
+
+/* Notifications / New Accounts Section */
+.notifications-section,
+.new-accounts-section {
+  margin-top: 40px;
+}
+
+.notifications-section h2,
+.new-accounts-section h2 {
+  color: #0d47a1;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.status-badge {
+  padding: 4px 10px;
+  border-radius: 12px;
+  color: white;
+  text-transform: capitalize;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.status-badge.active {
+  background-color: #28a745;
+}
+
+.status-badge.busy {
+  background-color: #dc3545;
+}
+
+.status-badge.offline {
+  background-color: #6c757d;
+}
+
+/* Graph section */
+.system-highlights-graph {
+  background: #bbdefb;
+  padding: 25px 30px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(21, 101, 192, 0.15);
+  margin-bottom: 40px;
+}
+
+.system-highlights-graph h2 {
+  color: #0d47a1;
+  font-weight: 700;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .home-wrapper {
+    margin-left: 0;
+    width: 100vw;
+    padding: 20px 15px;
+    border-radius: 0;
+  }
+
+  .home-cards {
+    flex-direction: column;
+  }
+
+  .card {
+    width: 100%;
+    flex: 1 1 100%;
+  }
+
+  .status-grid {
+    flex-direction: column;
+  }
+
+  .status-boxes {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .status-table {
+    width: 100%;
+  }
+}
+
+.see-more-btn {
+  background: #007bff;
+  color: #fff;
+  border: none;
+  padding: 6px 18px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+.see-more-btn:hover {
+  background: #0056b3;
+}

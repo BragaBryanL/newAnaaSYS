@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Availability Notification System</title>
+<link rel="stylesheet" href="./style.css" />
+<style>
+  .filter-wrapper {
+    position: absolute;
+    top: 1.5rem;
+    right: 2rem;
+    z-index: 10;
+  }
+  .filter-btn {
+    font-size: 1.5rem;
+    background: white;
+    border: 2px solid #275efe;
+    border-radius: 8px;
+    padding: 4px 8px;
+    cursor: pointer;
+    color: #275efe;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  }
+  #dept-filter {
+    display: none;
+    margin-top: 0.5rem;
+    font-size: 1rem;
+    border-radius: 8px;
+    padding: 0.3rem 0.5rem;
+    background: white;
+    color: #275efe;
+    border: 2px solid #275efe;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+  }
+</style>
+</head>
+<body>
+  <header>
+    <img src="./anaa_syslogo.jpg" alt="ANA System Logo" />
+    <div class="titles">
+      <h1 class="main-title">Availability Notification System</h1>
+      <p class="subtitle">Instructor Availability Status</p>
+      <div id="current-time" class="current-time"></div>
+    </div>
+  </header>
+
+  <!-- Filter UI -->
+  <div class="filter-wrapper">
+    <button id="filterToggleBtn" class="filter-btn" aria-label="Filter Departments">🔽</button>
+    <select id="dept-filter" aria-label="Department Filter">
+      <option value="all">All Departments</option>
+      <option value="IT">IT</option>
+      <option value="DS">DS</option>
+      <option value="CS">CS</option>
+      <option value="TCM">TCM</option>
+    </select>
+  </div>
+
+  <main>
+    <div class="dashboard" id="dashboard"></div>
+  </main>
+
+  <script src="./index.js"></script>
+</body>
+</html>
