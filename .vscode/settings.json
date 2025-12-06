@@ -1,9 +1,4 @@
 {
-  "editor.codeActionsOnSave": {
-    "source.fixAll": "explicit",
-    "source.organizeImports": "explicit",
-    "source.sortMembers": "explicit"
-  },
   "cSpell.words": [
     "Anaa",
     "ANAA",
@@ -23,8 +18,25 @@
     "stacknavigator",
     "gitkraken",
     "repo",
+    "gradlew",
+    "proguard",
+    "mipmap",
+    "hdpi",
+    "mdpi",
+    "xhdpi",
+    "xxhdpi",
+    "xxxhdpi",
+    "drawable",
+    "kotlin",
+    "linebreak",
+    "autofocus",
+    "signup",
+    "signin",
     "syslogo",
     "UNREG",
-    "Rfids"
+    "Rfids",
+    "studentweb",
+    "studentwebsystem",
+    "depts"
   ]
 }

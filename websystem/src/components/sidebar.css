@@ -37,6 +37,7 @@
   margin-bottom: 45px;
   text-align: center;
   transition: color 0.3s ease;
+  white-space: nowrap;
 }
 
 /* Navigation */
@@ -60,7 +61,7 @@
   color: #0d47a1;
   font-size: 1.05rem;
   border-radius: 10px;
-  font-weight: 500;
+  font-weight: 600;
   background: transparent;
   transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
 }
@@ -74,7 +75,7 @@
 .sidebar-nav a.active {
   background-color: #64b5f6;
   color: white;
-  font-weight: 700;
+  font-weight: 600;
   box-shadow: inset 3px 0 0 #1565c0;
 }
 

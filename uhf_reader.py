@@ -15,7 +15,7 @@ from datetime import datetime
 # ----------------------------
 # Backend API Configuration
 # ----------------------------
-API_BASE_URL = "http://192.168.0.104:5000"
+API_BASE_URL = "http://192.168.0.103:5000"
 
 # API Endpoints
 ENDPOINT_CHECK_RFID = f"{API_BASE_URL}/faculty/rfid"

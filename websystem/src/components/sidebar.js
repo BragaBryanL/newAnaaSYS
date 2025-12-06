@@ -5,7 +5,6 @@ import {
   FiUserPlus,
   FiLayers,
   FiUsers,
-  FiFileText,
   FiMenu,
   FiX,
 } from "react-icons/fi";
@@ -69,12 +68,6 @@ function Sidebar() {
             <NavLink to="/users" className={({ isActive }) => (isActive ? "active" : "")}>
               <FiUsers className="icon" />
               Users
-            </NavLink>
-          </li>
-          <li>
-            <NavLink to="/consultation" className={({ isActive }) => (isActive ? "active" : "")}>
-              <FiFileText className="icon" />
-              Consultation
             </NavLink>
           </li>
         </ul>

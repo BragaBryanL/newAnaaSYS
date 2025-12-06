@@ -42,7 +42,7 @@ function Login({ onLogin }) {
         <div className="logo">
           <img src={logo} alt="Logo" className="logo-img" />
         </div>
-        <h2 className="login-title">Welcome Back</h2>
+        <h2 className="login-title">Anaa System</h2>
         {error && <p className="error-msg">{error}</p>}
         <form className="login-form" onSubmit={handleSubmit}>
           <div className="input-group">
@@ -68,10 +68,6 @@ function Login({ onLogin }) {
           <button type="submit" className="login-btn">
             Log In
           </button>
-          <a href="#" className="forgot-link">Forgot password?</a>
-          <p className="signup-text">
-            Don't have an account? <a href="#" className="signup-link">Sign up</a>
-          </p>
         </form>
       </div>
     </div>

@@ -50,13 +50,23 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     marginTop: 25,
   },
+  statusButtonContainer: {
+    alignItems: "center",
+    marginHorizontal: 15,
+  },
   toggleButton: {
     width: 45,
     height: 45,
     borderRadius: 22.5,
     borderWidth: 2,
     borderColor: "#a3bffa",
-    marginHorizontal: 15,
+  },
+  statusLabel: {
+    marginTop: 6,
+    fontSize: 12,
+    fontWeight: "600",
+    color: "#4a6785",
+    textAlign: "center",
   },
   toggleAvailable: {
     backgroundColor: "#22c55e", // green
@@ -107,6 +117,38 @@ const styles = StyleSheet.create({
     color: "#222",
     fontSize: 14,
     fontWeight: "600",
+  },
+  
+  // RFID Scan Status Indicator Styles
+  rfidStatusContainer: {
+    marginTop: 12,
+    padding: 10,
+    borderRadius: 8,
+    borderWidth: 1,
+  },
+  rfidStatusValid: {
+    backgroundColor: "#d4edda",
+    borderColor: "#28a745",
+  },
+  rfidStatusInvalid: {
+    backgroundColor: "#f8d7da",
+    borderColor: "#dc3545",
+  },
+  rfidStatusText: {
+    fontSize: 12,
+    fontWeight: "600" as const,
+    textAlign: "center" as const,
+  },
+  rfidStatusTextValid: {
+    color: "#155724",
+  },
+  rfidStatusTextInvalid: {
+    color: "#721c24",
+  },
+  rfidLastScanText: {
+    fontSize: 10,
+    textAlign: "center" as const,
+    marginTop: 4,
   },
 });
 

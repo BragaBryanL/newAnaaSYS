@@ -21,10 +21,11 @@ function Users() {
   }, []);
 
   const setStatus = (id, newStatus) => {
+    // Admin override: include bypassRfidCheck so web admin can change status
     fetch(`http://localhost:5000/faculty/${id}/status`, {
       method: "PATCH",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ status: newStatus }),
+      body: JSON.stringify({ status: newStatus, bypassRfidCheck: true }),
     })
       .then((res) => res.json())
       .then(() => {
@@ -33,6 +34,9 @@ function Users() {
           .then((res) => res.json())
           .then((data) => setUsers(Array.isArray(data) ? data : []))
           .catch(() => setUsers([]));
+      })
+      .catch(() => {
+        alert('Failed to update status.');
       });
   };
 

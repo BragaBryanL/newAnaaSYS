@@ -1,15 +1,5 @@
 import React, { useState, useEffect } from "react";
 import Sidebar from "../components/sidebar";
-import {
-  LineChart,
-  Line,
-  XAxis,
-  YAxis,
-  CartesianGrid,
-  Tooltip,
-  Legend,
-  ResponsiveContainer,
-} from "recharts";
 import "./home.css";
 
 function Home() {
@@ -19,9 +9,7 @@ function Home() {
   // Real-time data states
   const [facultyCount, setFacultyCount] = useState(0);
   const [departmentCount, setDepartmentCount] = useState(0);
-  const [consultationCount, setConsultationCount] = useState(0);
   const [statusCounts, setStatusCounts] = useState({ active: 0, busy: 0, offline: 0 });
-  const [monthlyConsultations, setMonthlyConsultations] = useState([]);
   const [notifications, setNotifications] = useState([]);
   const [showAllNotifications, setShowAllNotifications] = useState(false);
 
@@ -43,23 +31,17 @@ function Home() {
         const [
           facultyRes,
           deptRes,
-          consRes,
           statusRes,
-          monthlyRes,
           notifRes,
         ] = await Promise.all([
           fetch("http://localhost:5000/api/faculty/count").then((res) => res.json()).catch(() => ({ total: 0 })),
           fetch("http://localhost:5000/api/departments/count").then((res) => res.json()).catch(() => ({ total: 0 })),
-          fetch("http://localhost:5000/api/consultations/count").then((res) => res.json()).catch(() => ({ total: 0 })),
           fetch("http://localhost:5000/api/faculty/status-counts").then((res) => res.json()).catch(() => ({ active: 0, busy: 0, offline: 0 })),
-          fetch("http://localhost:5000/api/consultations/monthly").then((res) => res.json()).catch(() => []),
           fetch("http://localhost:5000/api/notifications").then((res) => res.json()).catch(() => []),
         ]);
         setFacultyCount(facultyRes.total || 0);
         setDepartmentCount(deptRes.total || 0);
-        setConsultationCount(consRes.total || 0);
         setStatusCounts(statusRes || { active: 0, busy: 0, offline: 0 });
-        setMonthlyConsultations(Array.isArray(monthlyRes) ? monthlyRes : []);
         setNotifications(Array.isArray(notifRes) ? notifRes : []);
       } catch (err) {
         console.error("Error fetching data:", err);
@@ -108,43 +90,31 @@ function Home() {
             <h3>Departments</h3>
             <div className="number">{departmentCount}</div>
           </div>
-          <div className="card">
-            <h3>Consultations</h3>
-            <div className="number">{consultationCount}</div>
-          </div>
-        </section>
-
-        {/* Monthly Consultations Graph */}
-        <section className="system-highlights-graph">
-          <h2>Monthly Consultations Overview</h2>
-          <ResponsiveContainer width="100%" height={300}>
-            <LineChart
-              data={monthlyConsultations}
-              margin={{ top: 20, right: 30, left: 20, bottom: 5 }}
-            >
-              <CartesianGrid strokeDasharray="3 3" />
-              <XAxis dataKey="month" />
-              <YAxis />
-              <Tooltip />
-              <Legend />
-              <Line
-                type="monotone"
-                dataKey="count"
-                stroke="#007bff"
-                activeDot={{ r: 8 }}
-                name="Consultations"
-              />
-            </LineChart>
-          </ResponsiveContainer>
         </section>
 
         {/* Faculty Status Overview */}
         <section className="faculty-status">
   <h2>Faculty Status Overview</h2>
-  <div className="status-grid status-boxes status-center">
-    <div className="status-box active-status">{statusCounts.active}</div>
-    <div className="status-box busy-status">{statusCounts.busy}</div>
-    <div className="status-box offline-status">{statusCounts.offline}</div>
+  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: '2rem' }}>
+    <div className="status-legend" style={{ flex: '0 0 auto', marginTop: '0' }}>
+      <div className="legend-item">
+        <span className="legend-color active-color"></span>
+        <span className="legend-text">Available</span>
+      </div>
+      <div className="legend-item">
+        <span className="legend-color busy-color"></span>
+        <span className="legend-text">Busy</span>
+      </div>
+      <div className="legend-item">
+        <span className="legend-color offline-color"></span>
+        <span className="legend-text">Offline</span>
+      </div>
+    </div>
+    <div className="status-grid status-boxes status-center" style={{ flex: '1', justifyContent: 'center' }}>
+      <div className="status-box active-status">{statusCounts.active}</div>
+      <div className="status-box busy-status">{statusCounts.busy}</div>
+      <div className="status-box offline-status">{statusCounts.offline}</div>
+    </div>
   </div>
 </section>
 
@@ -161,15 +131,14 @@ function Home() {
                   <th>Name</th>
                   <th>Department</th>
                   <th>RFID Number</th>
-                  <th>Type</th>
-                  <th>Message</th>
+                  <th>Action</th>
                   <th>Time</th>
                 </tr>
               </thead>
               <tbody>
                 {displayedNotifications.length === 0 ? (
                   <tr>
-                    <td colSpan="6" style={{ textAlign: "center" }}>
+                    <td colSpan="5" style={{ textAlign: "center" }}>
                       No notifications for today.
                     </td>
                   </tr>
@@ -184,18 +153,33 @@ function Home() {
                       type,
                       message,
                       created_at,
-                    }) => (
-                      <tr key={id}>
-                        <td>
-                          {first_name} {last_name}
-                        </td>
-                        <td>{department}</td>
-                        <td>{rfid || "-"}</td>
-                        <td>{type}</td>
-                        <td>{message}</td>
-                        <td>{new Date(created_at).toLocaleString()}</td>
-                      </tr>
-                    )
+                    }) => {
+                      // Convert type to readable action
+                      let action = message;
+                      if (type === 'status_change') {
+                        // Extract status from message like "Status changed to Busy"
+                        const statusMatch = message.match(/Status changed to (\w+)/i);
+                        action = statusMatch ? statusMatch[1] : message;
+                      } else if (type === 'faculty_created') {
+                        action = 'Account Creation';
+                      } else if (type === 'faculty_updated') {
+                        action = 'Account Updated';
+                      } else if (message && message.includes('RFID scanned')) {
+                        action = 'RFID Scanned';
+                      }
+                      
+                      return (
+                        <tr key={id}>
+                          <td>
+                            {first_name} {last_name}
+                          </td>
+                          <td>{department}</td>
+                          <td>{rfid || "-"}</td>
+                          <td>{action}</td>
+                          <td>{new Date(created_at).toLocaleString()}</td>
+                        </tr>
+                      );
+                    }
                   )
                 )}
               </tbody>

@@ -1,18 +1,15 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef, useCallback } from "react";
 import {
   View,
   Text,
   TouchableOpacity,
   Image,
   Dimensions,
-  TouchableWithoutFeedback,
   Alert,
   Vibration,
   AppState,
 } from "react-native";
 import AsyncStorage from "@react-native-async-storage/async-storage";
-import { Feather } from "@expo/vector-icons";
-import Constants from "expo-constants";
 import styles from "../styles/HomeScreenStyles";
 import type { NativeStackScreenProps } from '@react-navigation/native-stack';
 
@@ -24,7 +21,7 @@ type RootStackParamList = {
 type HomeScreenProps = NativeStackScreenProps<RootStackParamList, 'Home'>;
 
 // ✅ Use your static IP here
-const API_URL = "http://192.168.0.104:5000";
+const API_URL = "http://192.168.0.103:5000";
 
 export default function HomeScreen({ route, navigation }: HomeScreenProps) {
   const faculty = route?.params?.faculty;
@@ -35,8 +32,12 @@ export default function HomeScreen({ route, navigation }: HomeScreenProps) {
         : faculty.status.toLowerCase()
       : "offline"
   );
-  const [hasNotifications, setHasNotifications] = useState(true);
-  const [showNotificationsPanel, setShowNotificationsPanel] = useState(false);
+  const [rfidScanStatus, setRfidScanStatus] = useState<{
+    canChangeStatus: boolean;
+    lastScan: string | null;
+    hoursAgo: string | null;
+    message: string;
+  } | null>(null);
   const { width } = Dimensions.get("window");
   const containerWidth = Math.min(320, width - 40);
 
@@ -54,12 +55,13 @@ export default function HomeScreen({ route, navigation }: HomeScreenProps) {
   };
 
   // Reset inactivity timer whenever status changes or app comes to foreground
-  const resetInactivityTimer = () => {
+  const resetInactivityTimer = useCallback(() => {
     if (inactivityTimer.current) {
       clearTimeout(inactivityTimer.current);
     }
-    inactivityTimer.current = setTimeout(triggerReminder, 7200000); // adjust to 2 hours in production
-  };
+    // 5 seconds for testing (change to 7200000 for 2 hours in production)
+    inactivityTimer.current = setTimeout(triggerReminder, 5000) as unknown as number;
+  }, []);
 
   // Set/reset timer on mount, status change, or app comes to foreground
   useEffect(() => {
@@ -73,7 +75,26 @@ export default function HomeScreen({ route, navigation }: HomeScreenProps) {
       if (inactivityTimer.current) clearTimeout(inactivityTimer.current);
       subscription.remove();
     };
-  }, [status]);
+  }, [status, resetInactivityTimer]);
+
+  // Check RFID scan status on mount and every 5 minutes
+  useEffect(() => {
+    if (!faculty) return;
+    
+    const checkRfidScan = async () => {
+      try {
+        const res = await fetch(`${API_URL}/faculty/${faculty.id}/rfid-scan-status`);
+        const data = await res.json();
+        setRfidScanStatus(data);
+      } catch (err) {
+        console.error("Failed to check RFID scan status", err);
+      }
+    };
+    
+    checkRfidScan(); // Check immediately
+    const interval = setInterval(checkRfidScan, 5000); // Check every 5 minutes
+    return () => clearInterval(interval);
+  }, [faculty]);
 
   // Poll backend for latest status every 5 seconds
   useEffect(() => {
@@ -90,23 +111,15 @@ export default function HomeScreen({ route, navigation }: HomeScreenProps) {
               : me.status.toLowerCase();
           setStatus(mapped);
         }
-      } catch (err) {
+      // eslint-disable-next-line @typescript-eslint/no-unused-vars
+      } catch (_err) {
         // Optionally handle error
       }
     }, 5000);
     return () => clearInterval(interval);
   }, [faculty]);
 
-  const toggleNotifications = () => {
-    setShowNotificationsPanel(!showNotificationsPanel);
-    if (hasNotifications) {
-      setHasNotifications(false);
-    }
-  };
 
-  const closeNotificationsPanel = () => {
-    if (showNotificationsPanel) setShowNotificationsPanel(false);
-  };
 
   // Update status in backend and UI
   const updateStatus = async (newStatus: string) => {
@@ -116,14 +129,44 @@ export default function HomeScreen({ route, navigation }: HomeScreenProps) {
     else backendStatus = "Offline";
 
     try {
-      await fetch(`${API_URL}/faculty/${faculty.id}/status`, {
+      // First, check if RFID scan is valid (within 10 seconds)
+      const checkResponse = await fetch(`${API_URL}/faculty/${faculty.id}/rfid-scan-status`);
+      const checkData = await checkResponse.json();
+      
+      if (!checkData.canChangeStatus) {
+        Vibration.vibrate(5000); // 5 second vibration
+        Alert.alert(
+          "RFID Scan Required",
+          checkData.message || "Please scan your RFID card before changing status.",
+          [{ text: "OK" }]
+        );
+        return;
+      }
+
+      // If RFID is valid, proceed with status update
+      const response = await fetch(`${API_URL}/faculty/${faculty.id}/status`, {
         method: "PATCH",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ status: backendStatus }),
       });
+
+      const data = await response.json();
+      
+      if (!response.ok) {
+        Vibration.vibrate(5000); // 5 second vibration
+        Alert.alert(
+          "Cannot Change Status",
+          data.message || "Please scan your RFID card first.",
+          [{ text: "OK" }]
+        );
+        return;
+      }
+
       setStatus(newStatus);
       resetInactivityTimer(); // Reset timer on manual status change
-    } catch (err) {
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    } catch (_err) {
+      Vibration.vibrate(5000); // 5 second vibration on error
       Alert.alert("Error", "Failed to update status. Please try again.");
     }
   };
@@ -146,24 +189,8 @@ export default function HomeScreen({ route, navigation }: HomeScreenProps) {
   }
 
   return (
-    <TouchableWithoutFeedback onPress={closeNotificationsPanel}>
-      <View style={styles.screen}>
-        <View style={styles.bellContainer}>
-          <TouchableOpacity onPress={toggleNotifications} activeOpacity={0.7}>
-            <Feather name="bell" size={36} color="#457b9d" />
-            {hasNotifications && <View style={styles.notificationBadge} />}
-          </TouchableOpacity>
-
-          {showNotificationsPanel && (
-            <View style={styles.notificationPanel}>
-              <Text style={styles.notificationText}>
-                Student John Doe (4th Year) opened a consultation form.
-              </Text>
-            </View>
-          )}
-        </View>
-
-        <View style={[styles.profileContainer, { width: containerWidth }]}>
+    <View style={styles.screen}>
+      <View style={[styles.profileContainer, { width: containerWidth }]}>
           <Image
             source={{
               uri:
@@ -197,31 +224,76 @@ export default function HomeScreen({ route, navigation }: HomeScreenProps) {
           <Text style={styles.infoText}>RFID: {faculty.rfid}</Text>
           <Text style={styles.infoText}>{faculty.department}</Text>
 
+          {/* RFID Scan Status Indicator */}
+          {rfidScanStatus && (
+            <View
+              style={[
+                styles.rfidStatusContainer,
+                rfidScanStatus.canChangeStatus
+                  ? styles.rfidStatusValid
+                  : styles.rfidStatusInvalid,
+              ]}
+            >
+              <Text
+                style={[
+                  styles.rfidStatusText,
+                  rfidScanStatus.canChangeStatus
+                    ? styles.rfidStatusTextValid
+                    : styles.rfidStatusTextInvalid,
+                ]}
+              >
+                {rfidScanStatus.canChangeStatus ? "✓ " : "⚠ "}
+                {rfidScanStatus.message}
+              </Text>
+              {rfidScanStatus.lastScan && (
+                <Text
+                  style={[
+                    styles.rfidLastScanText,
+                    rfidScanStatus.canChangeStatus
+                      ? styles.rfidStatusTextValid
+                      : styles.rfidStatusTextInvalid,
+                  ]}
+                >
+                  Last scan: {rfidScanStatus.hoursAgo} hours ago
+                </Text>
+              )}
+            </View>
+          )}
+
           <View style={styles.statusToggleRow}>
-            <TouchableOpacity
-              style={[
-                styles.toggleButton,
-                status === "available" && styles.toggleAvailable,
-              ]}
-              onPress={() => updateStatus("available")}
-              accessibilityLabel="Set status Available"
-            />
-            <TouchableOpacity
-              style={[
-                styles.toggleButton,
-                status === "busy" && styles.toggleBusy,
-              ]}
-              onPress={() => updateStatus("busy")}
-              accessibilityLabel="Set status Busy"
-            />
-            <TouchableOpacity
-              style={[
-                styles.toggleButton,
-                status === "offline" && styles.toggleOffline,
-              ]}
-              onPress={() => updateStatus("offline")}
-              accessibilityLabel="Set status Offline"
-            />
+            <View style={styles.statusButtonContainer}>
+              <TouchableOpacity
+                style={[
+                  styles.toggleButton,
+                  status === "available" && styles.toggleAvailable,
+                ]}
+                onPress={() => updateStatus("available")}
+                accessibilityLabel="Set status Available"
+              />
+              <Text style={styles.statusLabel}>Available</Text>
+            </View>
+            <View style={styles.statusButtonContainer}>
+              <TouchableOpacity
+                style={[
+                  styles.toggleButton,
+                  status === "busy" && styles.toggleBusy,
+                ]}
+                onPress={() => updateStatus("busy")}
+                accessibilityLabel="Set status Busy"
+              />
+              <Text style={styles.statusLabel}>Busy</Text>
+            </View>
+            <View style={styles.statusButtonContainer}>
+              <TouchableOpacity
+                style={[
+                  styles.toggleButton,
+                  status === "offline" && styles.toggleOffline,
+                ]}
+                onPress={() => updateStatus("offline")}
+                accessibilityLabel="Set status Offline"
+              />
+              <Text style={styles.statusLabel}>Offline</Text>
+            </View>
           </View>
 
           {/* Logout Button */}
@@ -231,7 +303,6 @@ export default function HomeScreen({ route, navigation }: HomeScreenProps) {
             </Text>
           </TouchableOpacity>
         </View>
-      </View>
-    </TouchableWithoutFeedback>
+    </View>
   );
 }

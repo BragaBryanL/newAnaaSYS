@@ -144,7 +144,8 @@ function DepartmentPage() {
           />
         </div>
 
-        <table className="faculty-dept-table">
+        <div className="table-wrapper">
+          <table className="faculty-dept-table">
           <thead>
             <tr>
               <th>Faculty</th>
@@ -202,6 +203,7 @@ function DepartmentPage() {
             )}
           </tbody>
         </table>
+        </div>
       </div>
     </div>
   );

@@ -1,6 +1,3 @@
-// Quick database initialization script
-// Run with: node init-database.js
-
 const { Pool } = require("pg");
 const fs = require("fs");
 const path = require("path");

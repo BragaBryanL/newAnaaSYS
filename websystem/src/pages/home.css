@@ -185,10 +185,43 @@
 .busy-status { background: #e74c3c; }
 .offline-status { background: #95a5a6; }
 
-/* Remove legend */
-.status-legend,
-.legend-box {
-  display: none !important;
+/* Status Legend */
+.status-legend {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.legend-color {
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+  display: inline-block;
+}
+
+.active-color {
+  background: #2ecc71;
+}
+
+.busy-color {
+  background: #e74c3c;
+}
+
+.offline-color {
+  background: #95a5a6;
+}
+
+.legend-text {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1a237e;
 }
 
 .status-table {

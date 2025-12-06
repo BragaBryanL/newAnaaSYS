@@ -1,51 +1,1696 @@
 [
   {
-    "id": "1764658192387jxo7ug",
+    "id": "1765020261785jwmwsr",
+    "tag": "32373134243958",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 32373134243958",
+    "created_at": "2025-12-06T11:24:21.785Z"
+  },
+  {
+    "id": "1765020256171czt8ob",
     "tag": "3134243974",
     "type": "not_registered",
     "message": "Unregistered RFID: 3134243974",
-    "created_at": "2025-12-02T06:49:52.387Z"
+    "created_at": "2025-12-06T11:24:16.171Z"
   },
   {
-    "id": "1764658192198u48xyi",
+    "id": "1765020256040jkfyxo",
+    "tag": "332353134243958",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 332353134243958",
+    "created_at": "2025-12-06T11:24:16.040Z"
+  },
+  {
+    "id": "1765020255745lkzclm",
+    "tag": "14498",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 14498",
+    "created_at": "2025-12-06T11:24:15.745Z"
+  },
+  {
+    "id": "17650202502967bc34g",
+    "tag": "3958",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3958",
+    "created_at": "2025-12-06T11:24:10.296Z"
+  },
+  {
+    "id": "1765020029190zid12g",
+    "tag": "3132353134243958",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3132353134243958",
+    "created_at": "2025-12-06T11:20:29.190Z"
+  },
+  {
+    "id": "1765019819584ovjf8u",
+    "tag": "331244",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 331244",
+    "created_at": "2025-12-06T11:16:59.584Z"
+  },
+  {
+    "id": "1765019741409bym2ox",
+    "tag": "14498",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 14498",
+    "created_at": "2025-12-06T11:15:41.409Z"
+  },
+  {
+    "id": "1765017364093wp9kd7",
+    "tag": "33235",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 33235",
+    "created_at": "2025-12-06T10:36:04.093Z"
+  },
+  {
+    "id": "1765017356968zs78qd",
+    "tag": "3498",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3498",
+    "created_at": "2025-12-06T10:35:56.968Z"
+  },
+  {
+    "id": "1765017266942j5m8o7",
+    "tag": "334498",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 334498",
+    "created_at": "2025-12-06T10:34:26.942Z"
+  },
+  {
+    "id": "1765017246478vhxbvg",
+    "tag": "33235",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 33235",
+    "created_at": "2025-12-06T10:34:06.478Z"
+  },
+  {
+    "id": "1765017200628ehzmx0",
+    "tag": "14498",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 14498",
+    "created_at": "2025-12-06T10:33:20.628Z"
+  },
+  {
+    "id": "1765017200355bioaru",
+    "tag": "334498",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 334498",
+    "created_at": "2025-12-06T10:33:20.355Z"
+  },
+  {
+    "id": "1765016804716q8cx61",
     "tag": "3134243974",
     "type": "not_registered",
     "message": "Unregistered RFID: 3134243974",
-    "created_at": "2025-12-02T06:49:52.198Z"
+    "created_at": "2025-12-06T10:26:44.716Z"
   },
   {
-    "id": "1764657706150cdzxny",
+    "id": "1765016804589rg8kz7",
     "tag": "3134243974",
     "type": "not_registered",
     "message": "Unregistered RFID: 3134243974",
-    "created_at": "2025-12-02T06:41:46.150Z"
+    "created_at": "2025-12-06T10:26:44.589Z"
   },
   {
-    "id": "1764657489823whss6z",
+    "id": "1765016802690msvzq8",
     "tag": "3134243974",
     "type": "not_registered",
     "message": "Unregistered RFID: 3134243974",
-    "created_at": "2025-12-02T06:38:09.823Z"
+    "created_at": "2025-12-06T10:26:42.690Z"
   },
   {
-    "id": "17646573906112d74x2",
-    "tag": "3134243870",
+    "id": "1765016802554bu79k9",
+    "tag": "32373134243974",
     "type": "not_registered",
-    "message": "Unregistered RFID: 3134243870",
-    "created_at": "2025-12-02T06:36:30.611Z"
+    "message": "Unregistered RFID: 32373134243974",
+    "created_at": "2025-12-06T10:26:42.554Z"
   },
   {
-    "id": "1764657390461n89j1r",
-    "tag": "3134243870",
+    "id": "1765016791036z55014",
+    "tag": "334498",
     "type": "not_registered",
-    "message": "Unregistered RFID: 3134243870",
-    "created_at": "2025-12-02T06:36:30.461Z"
+    "message": "Unregistered RFID: 334498",
+    "created_at": "2025-12-06T10:26:31.036Z"
   },
   {
-    "id": "1763896217792y2q03c",
-    "tag": "UNREG-TEST-1",
+    "id": "1765016780573go77mb",
+    "tag": "235",
     "type": "not_registered",
-    "message": "Unregistered RFID scanned: UNREG-TEST-1",
-    "created_at": "2025-11-23T11:10:17.792Z"
+    "message": "Unregistered RFID: 235",
+    "created_at": "2025-12-06T10:26:20.573Z"
+  },
+  {
+    "id": "1765016181272ccvjm5",
+    "tag": "3134243958",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243958",
+    "created_at": "2025-12-06T10:16:21.272Z"
+  },
+  {
+    "id": "17650161783982lbql3",
+    "tag": "332353134243958",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 332353134243958",
+    "created_at": "2025-12-06T10:16:18.398Z"
+  },
+  {
+    "id": "1765016167428wht9ib",
+    "tag": "33235",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 33235",
+    "created_at": "2025-12-06T10:16:07.428Z"
+  },
+  {
+    "id": "1764906746800e5wdfh",
+    "tag": "3134243926",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243926",
+    "created_at": "2025-12-05T03:52:26.800Z"
+  },
+  {
+    "id": "1764906746141bzrj7f",
+    "tag": "3134243958",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243958",
+    "created_at": "2025-12-05T03:52:26.141Z"
+  },
+  {
+    "id": "17649047345442q5gjh",
+    "tag": "3134243926",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243926",
+    "created_at": "2025-12-05T03:18:54.544Z"
+  },
+  {
+    "id": "1764904734406sci0h9",
+    "tag": "3134243958",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243958",
+    "created_at": "2025-12-05T03:18:54.406Z"
+  },
+  {
+    "id": "1764904734226ihibf6",
+    "tag": "3134243974",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243974",
+    "created_at": "2025-12-05T03:18:54.226Z"
+  },
+  {
+    "id": "1764904734043nkphm7",
+    "tag": "3134243942",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243942",
+    "created_at": "2025-12-05T03:18:54.043Z"
+  },
+  {
+    "id": "176490473388001dsky",
+    "tag": "3134243958",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243958",
+    "created_at": "2025-12-05T03:18:53.880Z"
+  },
+  {
+    "id": "1764904733663jc6gf4",
+    "tag": "3134243926",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243926",
+    "created_at": "2025-12-05T03:18:53.663Z"
+  },
+  {
+    "id": "17649047334969p4oxe",
+    "tag": "3134243974",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243974",
+    "created_at": "2025-12-05T03:18:53.496Z"
+  },
+  {
+    "id": "17649047333547fjgmp",
+    "tag": "3134243906",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243906",
+    "created_at": "2025-12-05T03:18:53.354Z"
+  },
+  {
+    "id": "1764904733199j81b9f",
+    "tag": "3134243974",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243974",
+    "created_at": "2025-12-05T03:18:53.199Z"
+  },
+  {
+    "id": "1764904733031gv8k3w",
+    "tag": "3134243958",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243958",
+    "created_at": "2025-12-05T03:18:53.031Z"
+  },
+  {
+    "id": "1764904732858ja2340",
+    "tag": "3134243942",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243942",
+    "created_at": "2025-12-05T03:18:52.858Z"
+  },
+  {
+    "id": "1764904732660jju1re",
+    "tag": "3134243926",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243926",
+    "created_at": "2025-12-05T03:18:52.660Z"
+  },
+  {
+    "id": "1764904732501xg8ljh",
+    "tag": "3134243974",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243974",
+    "created_at": "2025-12-05T03:18:52.501Z"
+  },
+  {
+    "id": "1764904732313uzlo8d",
+    "tag": "3134243926",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243926",
+    "created_at": "2025-12-05T03:18:52.313Z"
+  },
+  {
+    "id": "1764904732145f40bo6",
+    "tag": "3134243958",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243958",
+    "created_at": "2025-12-05T03:18:52.145Z"
+  },
+  {
+    "id": "17649047320063a1n5y",
+    "tag": "3134243942",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243942",
+    "created_at": "2025-12-05T03:18:52.006Z"
+  },
+  {
+    "id": "17649047318213f14a3",
+    "tag": "3134243958",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243958",
+    "created_at": "2025-12-05T03:18:51.821Z"
+  },
+  {
+    "id": "1764904731663465gnw",
+    "tag": "3134243926",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243926",
+    "created_at": "2025-12-05T03:18:51.663Z"
+  },
+  {
+    "id": "17649047314896r1yhi",
+    "tag": "3134243958",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243958",
+    "created_at": "2025-12-05T03:18:51.489Z"
+  },
+  {
+    "id": "1764904731228rlsf6d",
+    "tag": "3134243958",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243958",
+    "created_at": "2025-12-05T03:18:51.228Z"
+  },
+  {
+    "id": "1764904730978zjzcy6",
+    "tag": "3134243926",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243926",
+    "created_at": "2025-12-05T03:18:50.978Z"
+  },
+  {
+    "id": "1764904730723lsiqsy",
+    "tag": "3134243974",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243974",
+    "created_at": "2025-12-05T03:18:50.723Z"
+  },
+  {
+    "id": "1764904730519ppfwp6",
+    "tag": "3134243974",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243974",
+    "created_at": "2025-12-05T03:18:50.519Z"
+  },
+  {
+    "id": "17649047303792gvvs2",
+    "tag": "3134243958",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243958",
+    "created_at": "2025-12-05T03:18:50.379Z"
+  },
+  {
+    "id": "1764904730229do4rfv",
+    "tag": "3134243974",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243974",
+    "created_at": "2025-12-05T03:18:50.229Z"
+  },
+  {
+    "id": "17649047300797adc1a",
+    "tag": "3134243958",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243958",
+    "created_at": "2025-12-05T03:18:50.079Z"
+  },
+  {
+    "id": "176490472992870cvdt",
+    "tag": "3134243926",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243926",
+    "created_at": "2025-12-05T03:18:49.928Z"
+  },
+  {
+    "id": "1764904729792lmg83a",
+    "tag": "3134243974",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243974",
+    "created_at": "2025-12-05T03:18:49.792Z"
+  },
+  {
+    "id": "17649047296466m7fpg",
+    "tag": "3134243926",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243926",
+    "created_at": "2025-12-05T03:18:49.646Z"
+  },
+  {
+    "id": "1764904729495qiwjk7",
+    "tag": "3134243974",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243974",
+    "created_at": "2025-12-05T03:18:49.495Z"
+  },
+  {
+    "id": "17649047293220cd27f",
+    "tag": "3134243958",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243958",
+    "created_at": "2025-12-05T03:18:49.322Z"
+  },
+  {
+    "id": "1764904729165hqet87",
+    "tag": "3134243958",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243958",
+    "created_at": "2025-12-05T03:18:49.165Z"
+  },
+  {
+    "id": "1764904728949tfkx7p",
+    "tag": "3134243926",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243926",
+    "created_at": "2025-12-05T03:18:48.949Z"
+  },
+  {
+    "id": "1764904728691law6ch",
+    "tag": "3134243958",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243958",
+    "created_at": "2025-12-05T03:18:48.691Z"
+  },
+  {
+    "id": "1764904728425qt2rur",
+    "tag": "3134243974",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243974",
+    "created_at": "2025-12-05T03:18:48.425Z"
+  },
+  {
+    "id": "1764904728223vrw5mo",
+    "tag": "3134243926",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243926",
+    "created_at": "2025-12-05T03:18:48.223Z"
+  },
+  {
+    "id": "1764904728020i9rdv9",
+    "tag": "3134243958",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243958",
+    "created_at": "2025-12-05T03:18:48.020Z"
+  },
+  {
+    "id": "1764904727809ptn13f",
+    "tag": "3134243974",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243974",
+    "created_at": "2025-12-05T03:18:47.809Z"
+  },
+  {
+    "id": "17649047276017rdwmf",
+    "tag": "3134243926",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243926",
+    "created_at": "2025-12-05T03:18:47.601Z"
+  },
+  {
+    "id": "1764904727358kjss1m",
+    "tag": "3134243974",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243974",
+    "created_at": "2025-12-05T03:18:47.358Z"
+  },
+  {
+    "id": "1764904727188jkzem2",
+    "tag": "3134243958",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243958",
+    "created_at": "2025-12-05T03:18:47.188Z"
+  },
+  {
+    "id": "1764904726967bymks5",
+    "tag": "3134243926",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243926",
+    "created_at": "2025-12-05T03:18:46.967Z"
+  },
+  {
+    "id": "1764904726766aatikr",
+    "tag": "3134243958",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243958",
+    "created_at": "2025-12-05T03:18:46.766Z"
+  },
+  {
+    "id": "1764904726508i3siq4",
+    "tag": "3134243974",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243974",
+    "created_at": "2025-12-05T03:18:46.508Z"
+  },
+  {
+    "id": "1764904726321gxbroe",
+    "tag": "3134243926",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243926",
+    "created_at": "2025-12-05T03:18:46.321Z"
+  },
+  {
+    "id": "17649047261652nowde",
+    "tag": "3134243958",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243958",
+    "created_at": "2025-12-05T03:18:46.165Z"
+  },
+  {
+    "id": "1764904725978dyqpli",
+    "tag": "3134243958",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243958",
+    "created_at": "2025-12-05T03:18:45.978Z"
+  },
+  {
+    "id": "17649047258201y9kom",
+    "tag": "3134243958",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243958",
+    "created_at": "2025-12-05T03:18:45.820Z"
+  },
+  {
+    "id": "1764904725669t2o21g",
+    "tag": "3134243958",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243958",
+    "created_at": "2025-12-05T03:18:45.669Z"
+  },
+  {
+    "id": "17649047254333z53ly",
+    "tag": "3134243926",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243926",
+    "created_at": "2025-12-05T03:18:45.433Z"
+  },
+  {
+    "id": "1764904725285nqniro",
+    "tag": "3134243926",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243926",
+    "created_at": "2025-12-05T03:18:45.285Z"
+  },
+  {
+    "id": "1764904725111bunx17",
+    "tag": "3134243974",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243974",
+    "created_at": "2025-12-05T03:18:45.111Z"
+  },
+  {
+    "id": "1764904724962i7xvgm",
+    "tag": "3134243958",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243958",
+    "created_at": "2025-12-05T03:18:44.962Z"
+  },
+  {
+    "id": "1764904724760086x19",
+    "tag": "3134243926",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243926",
+    "created_at": "2025-12-05T03:18:44.760Z"
+  },
+  {
+    "id": "1764904724580rqbktl",
+    "tag": "3134243974",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243974",
+    "created_at": "2025-12-05T03:18:44.580Z"
+  },
+  {
+    "id": "1764904724340jbo2e0",
+    "tag": "3134243958",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243958",
+    "created_at": "2025-12-05T03:18:44.340Z"
+  },
+  {
+    "id": "1764904723926xssntx",
+    "tag": "3134243942",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243942",
+    "created_at": "2025-12-05T03:18:43.926Z"
+  },
+  {
+    "id": "1764904723693yfowbb",
+    "tag": "3134243926",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243926",
+    "created_at": "2025-12-05T03:18:43.693Z"
+  },
+  {
+    "id": "17649047235570flntp",
+    "tag": "3134243906",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243906",
+    "created_at": "2025-12-05T03:18:43.557Z"
+  },
+  {
+    "id": "1764904723374x4n441",
+    "tag": "3134243942",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243942",
+    "created_at": "2025-12-05T03:18:43.374Z"
+  },
+  {
+    "id": "1764904723235xw9wza",
+    "tag": "3134243974",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243974",
+    "created_at": "2025-12-05T03:18:43.235Z"
+  },
+  {
+    "id": "1764904112504kw9rtf",
+    "tag": "3134243958",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243958",
+    "created_at": "2025-12-05T03:08:32.504Z"
+  },
+  {
+    "id": "1764904112290xrywws",
+    "tag": "3134243958",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243958",
+    "created_at": "2025-12-05T03:08:32.290Z"
+  },
+  {
+    "id": "1764904112111ebc2kr",
+    "tag": "3134243958",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243958",
+    "created_at": "2025-12-05T03:08:32.111Z"
+  },
+  {
+    "id": "1764904111973vweefs",
+    "tag": "3134243942",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243942",
+    "created_at": "2025-12-05T03:08:31.973Z"
+  },
+  {
+    "id": "1764904111822zkkbtz",
+    "tag": "3134243942",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243942",
+    "created_at": "2025-12-05T03:08:31.822Z"
+  },
+  {
+    "id": "1764904111681x9v2tm",
+    "tag": "3134243942",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243942",
+    "created_at": "2025-12-05T03:08:31.681Z"
+  },
+  {
+    "id": "1764904111541wv9slj",
+    "tag": "3134243958",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243958",
+    "created_at": "2025-12-05T03:08:31.541Z"
+  },
+  {
+    "id": "1764904111365dc0f7j",
+    "tag": "3134243942",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243942",
+    "created_at": "2025-12-05T03:08:31.365Z"
+  },
+  {
+    "id": "1764904111207c7g9ck",
+    "tag": "3134243906",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243906",
+    "created_at": "2025-12-05T03:08:31.207Z"
+  },
+  {
+    "id": "1764904111028s3md5q",
+    "tag": "3134243958",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243958",
+    "created_at": "2025-12-05T03:08:31.028Z"
+  },
+  {
+    "id": "1764904110864dsnlke",
+    "tag": "3134243926",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243926",
+    "created_at": "2025-12-05T03:08:30.864Z"
+  },
+  {
+    "id": "1764904110714kjux8i",
+    "tag": "3134243942",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243942",
+    "created_at": "2025-12-05T03:08:30.714Z"
+  },
+  {
+    "id": "17649041105510p1ljf",
+    "tag": "3134243958",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243958",
+    "created_at": "2025-12-05T03:08:30.551Z"
+  },
+  {
+    "id": "1764904110408a0tag3",
+    "tag": "3134243926",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243926",
+    "created_at": "2025-12-05T03:08:30.408Z"
+  },
+  {
+    "id": "1764904110273x64g6m",
+    "tag": "3134243942",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243942",
+    "created_at": "2025-12-05T03:08:30.273Z"
+  },
+  {
+    "id": "1764904110128i7fadt",
+    "tag": "3134243942",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243942",
+    "created_at": "2025-12-05T03:08:30.128Z"
+  },
+  {
+    "id": "17649041099752ztprz",
+    "tag": "3134243942",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243942",
+    "created_at": "2025-12-05T03:08:29.975Z"
+  },
+  {
+    "id": "176490410975178zg6w",
+    "tag": "3134243942",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243942",
+    "created_at": "2025-12-05T03:08:29.751Z"
+  },
+  {
+    "id": "1764904109606y2x8vi",
+    "tag": "3134243926",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243926",
+    "created_at": "2025-12-05T03:08:29.606Z"
+  },
+  {
+    "id": "17649041094759u24uu",
+    "tag": "3134243942",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243942",
+    "created_at": "2025-12-05T03:08:29.475Z"
+  },
+  {
+    "id": "1764904109262jsu40b",
+    "tag": "3134243926",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243926",
+    "created_at": "2025-12-05T03:08:29.262Z"
+  },
+  {
+    "id": "1764904109102dc1spl",
+    "tag": "3134243958",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243958",
+    "created_at": "2025-12-05T03:08:29.102Z"
+  },
+  {
+    "id": "1764904108946zxn2m9",
+    "tag": "3134243942",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243942",
+    "created_at": "2025-12-05T03:08:28.946Z"
+  },
+  {
+    "id": "1764904108744nyfuc1",
+    "tag": "3134243906",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243906",
+    "created_at": "2025-12-05T03:08:28.744Z"
+  },
+  {
+    "id": "176490410853800q2f6",
+    "tag": "3134243926",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243926",
+    "created_at": "2025-12-05T03:08:28.538Z"
+  },
+  {
+    "id": "1764904108363sxug9w",
+    "tag": "3134243942",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243942",
+    "created_at": "2025-12-05T03:08:28.363Z"
+  },
+  {
+    "id": "176490410823040xusk",
+    "tag": "3134243926",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243926",
+    "created_at": "2025-12-05T03:08:28.230Z"
+  },
+  {
+    "id": "17649041080947g7163",
+    "tag": "3134243942",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243942",
+    "created_at": "2025-12-05T03:08:28.094Z"
+  },
+  {
+    "id": "1764904107955jzshqc",
+    "tag": "3134243906",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243906",
+    "created_at": "2025-12-05T03:08:27.955Z"
+  },
+  {
+    "id": "17649041077781aafin",
+    "tag": "3134243958",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243958",
+    "created_at": "2025-12-05T03:08:27.778Z"
+  },
+  {
+    "id": "1764904107613g5y9z1",
+    "tag": "3134243942",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243942",
+    "created_at": "2025-12-05T03:08:27.613Z"
+  },
+  {
+    "id": "17649041074408nylgk",
+    "tag": "3134243942",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243942",
+    "created_at": "2025-12-05T03:08:27.440Z"
+  },
+  {
+    "id": "1764904107169urav12",
+    "tag": "3134243958",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243958",
+    "created_at": "2025-12-05T03:08:27.169Z"
+  },
+  {
+    "id": "1764904106993ol4zka",
+    "tag": "3134243926",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243926",
+    "created_at": "2025-12-05T03:08:26.993Z"
+  },
+  {
+    "id": "176490410682477rhqt",
+    "tag": "3134243958",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243958",
+    "created_at": "2025-12-05T03:08:26.824Z"
+  },
+  {
+    "id": "17649041066197glmfm",
+    "tag": "3134243958",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243958",
+    "created_at": "2025-12-05T03:08:26.619Z"
+  },
+  {
+    "id": "17649041064827583e8",
+    "tag": "3134243958",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243958",
+    "created_at": "2025-12-05T03:08:26.482Z"
+  },
+  {
+    "id": "17649041063473bhjcg",
+    "tag": "3134243958",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243958",
+    "created_at": "2025-12-05T03:08:26.347Z"
+  },
+  {
+    "id": "17649041061435efkxp",
+    "tag": "3134243958",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243958",
+    "created_at": "2025-12-05T03:08:26.143Z"
+  },
+  {
+    "id": "176490410598895grw2",
+    "tag": "3134243958",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243958",
+    "created_at": "2025-12-05T03:08:25.988Z"
+  },
+  {
+    "id": "1764904105788jky1gk",
+    "tag": "3134243958",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243958",
+    "created_at": "2025-12-05T03:08:25.789Z"
+  },
+  {
+    "id": "1764904105643a3jhzc",
+    "tag": "3134243958",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243958",
+    "created_at": "2025-12-05T03:08:25.643Z"
+  },
+  {
+    "id": "1764904105187uaf5ap",
+    "tag": "3134243958",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243958",
+    "created_at": "2025-12-05T03:08:25.187Z"
+  },
+  {
+    "id": "1764904104985h8rj5z",
+    "tag": "3134243958",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243958",
+    "created_at": "2025-12-05T03:08:24.985Z"
+  },
+  {
+    "id": "1764904104772b90v7k",
+    "tag": "3134243958",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243958",
+    "created_at": "2025-12-05T03:08:24.772Z"
+  },
+  {
+    "id": "1764904104565s4w1ak",
+    "tag": "3134243958",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243958",
+    "created_at": "2025-12-05T03:08:24.565Z"
+  },
+  {
+    "id": "1764904104346gygkmc",
+    "tag": "3134243958",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243958",
+    "created_at": "2025-12-05T03:08:24.346Z"
+  },
+  {
+    "id": "17649041039476k6z6t",
+    "tag": "3134243926",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243926",
+    "created_at": "2025-12-05T03:08:23.947Z"
+  },
+  {
+    "id": "17649041037384r14d5",
+    "tag": "3134243958",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243958",
+    "created_at": "2025-12-05T03:08:23.738Z"
+  },
+  {
+    "id": "1764904102474qvdn8c",
+    "tag": "3134243958",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243958",
+    "created_at": "2025-12-05T03:08:22.474Z"
+  },
+  {
+    "id": "1764904102261atjnte",
+    "tag": "3134243958",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243958",
+    "created_at": "2025-12-05T03:08:22.261Z"
+  },
+  {
+    "id": "176490410202746d2nt",
+    "tag": "3134243926",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243926",
+    "created_at": "2025-12-05T03:08:22.027Z"
+  },
+  {
+    "id": "1764904101884c3zn5l",
+    "tag": "3134243958",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243958",
+    "created_at": "2025-12-05T03:08:21.884Z"
+  },
+  {
+    "id": "17649041017442djnp1",
+    "tag": "3134243958",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243958",
+    "created_at": "2025-12-05T03:08:21.744Z"
+  },
+  {
+    "id": "1764904101575055p2i",
+    "tag": "3134243926",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243926",
+    "created_at": "2025-12-05T03:08:21.575Z"
+  },
+  {
+    "id": "1764904101433bh9gt3",
+    "tag": "3134243926",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243926",
+    "created_at": "2025-12-05T03:08:21.433Z"
+  },
+  {
+    "id": "1764904101256yotxx3",
+    "tag": "3134243958",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243958",
+    "created_at": "2025-12-05T03:08:21.256Z"
+  },
+  {
+    "id": "176490410094706cc1k",
+    "tag": "3134243958",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243958",
+    "created_at": "2025-12-05T03:08:20.947Z"
+  },
+  {
+    "id": "1764904098782mwnjlq",
+    "tag": "3134243958",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243958",
+    "created_at": "2025-12-05T03:08:18.782Z"
+  },
+  {
+    "id": "1764904098065hv032x",
+    "tag": "3134243958",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243958",
+    "created_at": "2025-12-05T03:08:18.065Z"
+  },
+  {
+    "id": "17649040966897svyu9",
+    "tag": "3134243958",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243958",
+    "created_at": "2025-12-05T03:08:16.689Z"
+  },
+  {
+    "id": "1764904096531nih8q6",
+    "tag": "3134243958",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243958",
+    "created_at": "2025-12-05T03:08:16.531Z"
+  },
+  {
+    "id": "1764904096368utpgff",
+    "tag": "3134243906",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243906",
+    "created_at": "2025-12-05T03:08:16.368Z"
+  },
+  {
+    "id": "1764904096209h603jx",
+    "tag": "3134243942",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243942",
+    "created_at": "2025-12-05T03:08:16.209Z"
+  },
+  {
+    "id": "17649040959142acqzr",
+    "tag": "3134243906",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243906",
+    "created_at": "2025-12-05T03:08:15.914Z"
+  },
+  {
+    "id": "1764904095729eny2yb",
+    "tag": "3134243958",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243958",
+    "created_at": "2025-12-05T03:08:15.729Z"
+  },
+  {
+    "id": "1764904095536ewuxvf",
+    "tag": "3134243958",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243958",
+    "created_at": "2025-12-05T03:08:15.536Z"
+  },
+  {
+    "id": "176490409519879ac33",
+    "tag": "3134243906",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243906",
+    "created_at": "2025-12-05T03:08:15.198Z"
+  },
+  {
+    "id": "1764904094992zvx0pa",
+    "tag": "3134243906",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243906",
+    "created_at": "2025-12-05T03:08:14.992Z"
+  },
+  {
+    "id": "17649040879551mytol",
+    "tag": "3134243926",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243926",
+    "created_at": "2025-12-05T03:08:07.955Z"
+  },
+  {
+    "id": "1764904087786odmyyl",
+    "tag": "3134243942",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243942",
+    "created_at": "2025-12-05T03:08:07.786Z"
+  },
+  {
+    "id": "1764904087570txlaok",
+    "tag": "3134243958",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243958",
+    "created_at": "2025-12-05T03:08:07.570Z"
+  },
+  {
+    "id": "17649040874312408ka",
+    "tag": "3134243906",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243906",
+    "created_at": "2025-12-05T03:08:07.431Z"
+  },
+  {
+    "id": "1764904087212gk5t6k",
+    "tag": "3134243958",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243958",
+    "created_at": "2025-12-05T03:08:07.212Z"
+  },
+  {
+    "id": "17649040870387gy59s",
+    "tag": "3134243958",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243958",
+    "created_at": "2025-12-05T03:08:07.038Z"
+  },
+  {
+    "id": "1764904086825j5tfau",
+    "tag": "3134243942",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243942",
+    "created_at": "2025-12-05T03:08:06.825Z"
+  },
+  {
+    "id": "17649040866681kz9sb",
+    "tag": "3134243926",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243926",
+    "created_at": "2025-12-05T03:08:06.668Z"
+  },
+  {
+    "id": "1764904086512dzy4gz",
+    "tag": "3134243942",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243942",
+    "created_at": "2025-12-05T03:08:06.512Z"
+  },
+  {
+    "id": "176490408634231ep0h",
+    "tag": "3134243942",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243942",
+    "created_at": "2025-12-05T03:08:06.342Z"
+  },
+  {
+    "id": "1764904083171cl9ri6",
+    "tag": "3134243974",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243974",
+    "created_at": "2025-12-05T03:08:03.171Z"
+  },
+  {
+    "id": "17649040830298lp13b",
+    "tag": "3134243974",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243974",
+    "created_at": "2025-12-05T03:08:03.029Z"
+  },
+  {
+    "id": "1764904082879v8cxoh",
+    "tag": "3134243974",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243974",
+    "created_at": "2025-12-05T03:08:02.879Z"
+  },
+  {
+    "id": "1764904082722vpc17r",
+    "tag": "3134243974",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243974",
+    "created_at": "2025-12-05T03:08:02.722Z"
+  },
+  {
+    "id": "1764904078610w276tx",
+    "tag": "3134243974",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243974",
+    "created_at": "2025-12-05T03:07:58.610Z"
+  },
+  {
+    "id": "1764904078414hc4uaj",
+    "tag": "3134243974",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243974",
+    "created_at": "2025-12-05T03:07:58.414Z"
+  },
+  {
+    "id": "176490407819544sh0x",
+    "tag": "3134243974",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243974",
+    "created_at": "2025-12-05T03:07:58.195Z"
+  },
+  {
+    "id": "1764904077931iqoji6",
+    "tag": "3134243974",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243974",
+    "created_at": "2025-12-05T03:07:57.931Z"
+  },
+  {
+    "id": "176490407772879v22q",
+    "tag": "3134243974",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243974",
+    "created_at": "2025-12-05T03:07:57.728Z"
+  },
+  {
+    "id": "176490400385973nocj",
+    "tag": "3134243974",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243974",
+    "created_at": "2025-12-05T03:06:43.859Z"
+  },
+  {
+    "id": "1764904003493ikiizy",
+    "tag": "3134243974",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243974",
+    "created_at": "2025-12-05T03:06:43.493Z"
+  },
+  {
+    "id": "1764904003328ju3cnq",
+    "tag": "3134243974",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243974",
+    "created_at": "2025-12-05T03:06:43.328Z"
+  },
+  {
+    "id": "17649040031710wdvq2",
+    "tag": "3134243974",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243974",
+    "created_at": "2025-12-05T03:06:43.171Z"
+  },
+  {
+    "id": "1764904002957pktun1",
+    "tag": "3134243974",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243974",
+    "created_at": "2025-12-05T03:06:42.957Z"
+  },
+  {
+    "id": "1764904002785dfaxwg",
+    "tag": "3134243974",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243974",
+    "created_at": "2025-12-05T03:06:42.785Z"
+  },
+  {
+    "id": "1764904002644uqnnja",
+    "tag": "3134243974",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243974",
+    "created_at": "2025-12-05T03:06:42.644Z"
+  },
+  {
+    "id": "1764904002470pb79ys",
+    "tag": "3134243974",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243974",
+    "created_at": "2025-12-05T03:06:42.470Z"
+  },
+  {
+    "id": "1764903973696xex6cj",
+    "tag": "3134243974",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243974",
+    "created_at": "2025-12-05T03:06:13.696Z"
+  },
+  {
+    "id": "1764903973445frwd1i",
+    "tag": "3134243974",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243974",
+    "created_at": "2025-12-05T03:06:13.445Z"
+  },
+  {
+    "id": "1764903973264lk9wz0",
+    "tag": "3134243974",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243974",
+    "created_at": "2025-12-05T03:06:13.264Z"
+  },
+  {
+    "id": "1764903972992aj1yr0",
+    "tag": "3134243974",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243974",
+    "created_at": "2025-12-05T03:06:12.992Z"
+  },
+  {
+    "id": "1764903964509ilmkg2",
+    "tag": "3134243974",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243974",
+    "created_at": "2025-12-05T03:06:04.509Z"
+  },
+  {
+    "id": "1764903964147oph9ve",
+    "tag": "3134243974",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243974",
+    "created_at": "2025-12-05T03:06:04.147Z"
+  },
+  {
+    "id": "176490396394101vimg",
+    "tag": "3134243974",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243974",
+    "created_at": "2025-12-05T03:06:03.942Z"
+  },
+  {
+    "id": "1764903963751ua5l6b",
+    "tag": "3134243974",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243974",
+    "created_at": "2025-12-05T03:06:03.751Z"
+  },
+  {
+    "id": "17647475612187wl3o6",
+    "tag": "3134243974",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243974",
+    "created_at": "2025-12-03T07:39:21.218Z"
+  },
+  {
+    "id": "1764747561080ultqdi",
+    "tag": "3134243974",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243974",
+    "created_at": "2025-12-03T07:39:21.080Z"
+  },
+  {
+    "id": "1764747560945jf8y51",
+    "tag": "3134243974",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243974",
+    "created_at": "2025-12-03T07:39:20.945Z"
+  },
+  {
+    "id": "1764747560658bwgs0x",
+    "tag": "3134243974",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243974",
+    "created_at": "2025-12-03T07:39:20.658Z"
+  },
+  {
+    "id": "1764747560522z8kxdm",
+    "tag": "3134243974",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243974",
+    "created_at": "2025-12-03T07:39:20.522Z"
+  },
+  {
+    "id": "17647475603926y3yij",
+    "tag": "3134243974",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243974",
+    "created_at": "2025-12-03T07:39:20.392Z"
+  },
+  {
+    "id": "1764747560255ifgzjy",
+    "tag": "3134243974",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243974",
+    "created_at": "2025-12-03T07:39:20.255Z"
+  },
+  {
+    "id": "17647475601156k6d1s",
+    "tag": "3134243974",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243974",
+    "created_at": "2025-12-03T07:39:20.115Z"
+  },
+  {
+    "id": "176474755997642mkt7",
+    "tag": "3134243974",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243974",
+    "created_at": "2025-12-03T07:39:19.976Z"
+  },
+  {
+    "id": "176474755983568k021",
+    "tag": "3134243974",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243974",
+    "created_at": "2025-12-03T07:39:19.835Z"
+  },
+  {
+    "id": "1764747559698cjkmfm",
+    "tag": "3134243974",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243974",
+    "created_at": "2025-12-03T07:39:19.699Z"
+  },
+  {
+    "id": "1764747559566e1azgf",
+    "tag": "3134243974",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243974",
+    "created_at": "2025-12-03T07:39:19.566Z"
+  },
+  {
+    "id": "1764747559429yawofe",
+    "tag": "3134243974",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243974",
+    "created_at": "2025-12-03T07:39:19.429Z"
+  },
+  {
+    "id": "1764747559299mjnu6d",
+    "tag": "3134243974",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243974",
+    "created_at": "2025-12-03T07:39:19.299Z"
+  },
+  {
+    "id": "1764747559167yuhyk7",
+    "tag": "3134243974",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243974",
+    "created_at": "2025-12-03T07:39:19.167Z"
+  },
+  {
+    "id": "1764747559032x6oxv0",
+    "tag": "3134243974",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243974",
+    "created_at": "2025-12-03T07:39:19.032Z"
+  },
+  {
+    "id": "17647475589000j7duw",
+    "tag": "3134243974",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243974",
+    "created_at": "2025-12-03T07:39:18.900Z"
+  },
+  {
+    "id": "1764747558764bjn5i9",
+    "tag": "3134243974",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243974",
+    "created_at": "2025-12-03T07:39:18.764Z"
+  },
+  {
+    "id": "1764747558635qiuv82",
+    "tag": "3134243974",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243974",
+    "created_at": "2025-12-03T07:39:18.635Z"
+  },
+  {
+    "id": "1764747558502biu5hi",
+    "tag": "3134243974",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243974",
+    "created_at": "2025-12-03T07:39:18.502Z"
+  },
+  {
+    "id": "1764747558371iln2vv",
+    "tag": "3134243974",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243974",
+    "created_at": "2025-12-03T07:39:18.371Z"
+  },
+  {
+    "id": "1764747558241d5vfpn",
+    "tag": "3134243974",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243974",
+    "created_at": "2025-12-03T07:39:18.241Z"
+  },
+  {
+    "id": "1764747558049lt6nnx",
+    "tag": "3134243974",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243974",
+    "created_at": "2025-12-03T07:39:18.049Z"
+  },
+  {
+    "id": "1764747557623yqxr3h",
+    "tag": "3134243974",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243974",
+    "created_at": "2025-12-03T07:39:17.623Z"
+  },
+  {
+    "id": "1764747557378uylxid",
+    "tag": "3134243974",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243974",
+    "created_at": "2025-12-03T07:39:17.378Z"
+  },
+  {
+    "id": "1764747556983zxr46n",
+    "tag": "3134243974",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243974",
+    "created_at": "2025-12-03T07:39:16.983Z"
+  },
+  {
+    "id": "1764747556571eah7t8",
+    "tag": "3134243974",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243974",
+    "created_at": "2025-12-03T07:39:16.571Z"
+  },
+  {
+    "id": "1764747556165rbg0co",
+    "tag": "3134243974",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243974",
+    "created_at": "2025-12-03T07:39:16.165Z"
+  },
+  {
+    "id": "1764747555583aochxe",
+    "tag": "3134243974",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243974",
+    "created_at": "2025-12-03T07:39:15.583Z"
+  },
+  {
+    "id": "1764747555454kufn4x",
+    "tag": "3134243974",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243974",
+    "created_at": "2025-12-03T07:39:15.454Z"
+  },
+  {
+    "id": "1764747555322af3u5h",
+    "tag": "3134243974",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243974",
+    "created_at": "2025-12-03T07:39:15.322Z"
+  },
+  {
+    "id": "1764747555189ukn1ox",
+    "tag": "3134243974",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243974",
+    "created_at": "2025-12-03T07:39:15.189Z"
+  },
+  {
+    "id": "1764747555060ocofc1",
+    "tag": "3134243974",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243974",
+    "created_at": "2025-12-03T07:39:15.060Z"
+  },
+  {
+    "id": "176474755492877t0ho",
+    "tag": "3134243974",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243974",
+    "created_at": "2025-12-03T07:39:14.928Z"
+  },
+  {
+    "id": "1764747554790sa1hly",
+    "tag": "3134243974",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243974",
+    "created_at": "2025-12-03T07:39:14.790Z"
+  },
+  {
+    "id": "1764747554644csh2zx",
+    "tag": "3134243974",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243974",
+    "created_at": "2025-12-03T07:39:14.644Z"
+  },
+  {
+    "id": "17647475545184fsnq0",
+    "tag": "3134243974",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243974",
+    "created_at": "2025-12-03T07:39:14.518Z"
+  },
+  {
+    "id": "1764747554389t276fe",
+    "tag": "3134243974",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243974",
+    "created_at": "2025-12-03T07:39:14.389Z"
+  },
+  {
+    "id": "1764747554259ethzga",
+    "tag": "3134243974",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243974",
+    "created_at": "2025-12-03T07:39:14.259Z"
+  },
+  {
+    "id": "1764747554123fs3r78",
+    "tag": "3134243974",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243974",
+    "created_at": "2025-12-03T07:39:14.123Z"
+  },
+  {
+    "id": "17647475539940icisx",
+    "tag": "3134243974",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243974",
+    "created_at": "2025-12-03T07:39:13.994Z"
+  },
+  {
+    "id": "1764747553866m27mdv",
+    "tag": "3134243974",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243974",
+    "created_at": "2025-12-03T07:39:13.866Z"
+  },
+  {
+    "id": "1764747553733g8old4",
+    "tag": "3134243974",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243974",
+    "created_at": "2025-12-03T07:39:13.733Z"
+  },
+  {
+    "id": "1764747553604qu0dkl",
+    "tag": "3134243974",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243974",
+    "created_at": "2025-12-03T07:39:13.604Z"
+  },
+  {
+    "id": "1764747553467chib5u",
+    "tag": "3134243974",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243974",
+    "created_at": "2025-12-03T07:39:13.467Z"
+  },
+  {
+    "id": "17647475533369pw7zz",
+    "tag": "3134243974",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243974",
+    "created_at": "2025-12-03T07:39:13.336Z"
+  },
+  {
+    "id": "1764747553201m7zd3s",
+    "tag": "3134243974",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243974",
+    "created_at": "2025-12-03T07:39:13.201Z"
+  },
+  {
+    "id": "1764747553057ecqbp6",
+    "tag": "3134243974",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243974",
+    "created_at": "2025-12-03T07:39:13.057Z"
+  },
+  {
+    "id": "17647475528569sit20",
+    "tag": "3134243974",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243974",
+    "created_at": "2025-12-03T07:39:12.856Z"
+  },
+  {
+    "id": "1764747551938rzhkoy",
+    "tag": "3134243974",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243974",
+    "created_at": "2025-12-03T07:39:11.938Z"
+  },
+  {
+    "id": "1764747551809bqd9vs",
+    "tag": "3134243974",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243974",
+    "created_at": "2025-12-03T07:39:11.809Z"
+  },
+  {
+    "id": "1764747551680jsqnlo",
+    "tag": "3134243974",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 3134243974",
+    "created_at": "2025-12-03T07:39:11.680Z"
   }
 ]

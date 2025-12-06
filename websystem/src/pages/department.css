@@ -7,25 +7,14 @@
   overflow: hidden;
 }
 
-/* Sidebar fixed width */
-.sidebar {
-  width: 240px; /* fixed sidebar width */
-  background-color: #222831;
-  color: white;
-  height: 100vh;
-  flex-shrink: 0;
-}
-
-/* Main content area fills remaining space */
+/* Main content area fills remaining space - accounting for fixed sidebar */
 .department-content {
-  flex-grow: 1;
+  margin-left: 250px;
   padding: 20px 30px;
   overflow-y: auto;
   height: 100vh;
   box-sizing: border-box;
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
+  width: calc(100vw - 250px);
 }
 
 /* Controls above the table */

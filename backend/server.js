@@ -5,6 +5,7 @@ const express = require("express");
 const cors = require("cors");
 const { Pool } = require("pg");
 const bcrypt = require("bcrypt");
+const cron = require("node-cron");
 
 const app = express();
 app.use(cors());
@@ -84,7 +85,10 @@ app.get("/", (req, res) => {
 app.get("/faculty", async (req, res) => {
   try {
     const result = await pool.query(`
-      SELECT f.*, us.status, us.last_updated
+      SELECT 
+        f.id, f.first_name, f.middle_initial, f.last_name, f.titles, 
+        f.email, f.rfid, f.department, f.created_at, f.updated_at, f.photo,
+        us.status, us.last_updated
       FROM faculty f
       LEFT JOIN user_status us ON f.id = us.faculty_id
       ORDER BY f.id DESC
@@ -330,18 +334,97 @@ app.put("/faculty/:id", async (req, res) => {
 });
 
 /**
+ * GET /faculty/:id/rfid-scan-status
+ * Check if faculty has scanned RFID within the last 12 hours (for testing)
+ * Path param: id (faculty ID)
+ * Returns: { canChangeStatus: boolean, lastScan: timestamp|null, hoursAgo: number|null }
+ */
+app.get("/faculty/:id/rfid-scan-status", async (req, res) => {
+  const { id } = req.params;
+  try {
+    const result = await pool.query(
+      `SELECT created_at, 
+              EXTRACT(EPOCH FROM (NOW() - created_at)) as seconds_ago
+       FROM rfid_logs 
+       WHERE faculty_id = $1 
+       ORDER BY created_at DESC 
+       LIMIT 1`,
+      [id]
+    );
+    
+    if (result.rowCount === 0) {
+      return res.json({ 
+        canChangeStatus: false, 
+        lastScan: null, 
+        hoursAgo: null,
+        message: "No RFID scan found. Please scan your RFID card first."
+      });
+    }
+    
+    const secondsAgo = parseFloat(result.rows[0].seconds_ago);
+    const canChangeStatus = secondsAgo <= 30;
+    
+    res.json({ 
+      canChangeStatus, 
+      lastScan: result.rows[0].created_at, 
+      hoursAgo: (secondsAgo / 3600).toFixed(1),
+      message: canChangeStatus 
+        ? "RFID scan verified" 
+        : `Last scan was ${secondsAgo.toFixed(0)} seconds ago. Please scan your RFID card.`
+    });
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: "Server error" });
+  }
+});
+
+/**
  * PATCH /faculty/:id/status
  * Update faculty status (Active, Busy, Offline)
  * Path param: id (faculty ID)
- * Body: { status: string }
+ * Body: { status: string, bypassRfidCheck: boolean (optional) }
  * Returns: { success: true }
+ * 
+ * Note: bypassRfidCheck should only be used by web admin interface
+ * Mobile app users must have valid RFID scan within 12 hours
  */
 app.patch("/faculty/:id/status", async (req, res) => {
   const { id } = req.params;
-  const { status } = req.body;
+  const { status, bypassRfidCheck } = req.body;
   const client = await pool.connect();
   try {
     await client.query("BEGIN");
+    
+    // Only check RFID if not bypassed (mobile app must follow this rule)
+    if (!bypassRfidCheck) {
+      // Check if user has scanned RFID within last 30 seconds (for testing)
+      const rfidCheck = await client.query(
+        `SELECT created_at, 
+                EXTRACT(EPOCH FROM (NOW() - created_at)) as seconds_ago
+         FROM rfid_logs 
+         WHERE faculty_id = $1 
+         ORDER BY created_at DESC 
+         LIMIT 1`,
+        [id]
+      );
+      
+      if (rfidCheck.rowCount === 0) {
+        await client.query("ROLLBACK");
+        return res.status(403).json({ 
+          error: "RFID scan required",
+          message: "Please scan your RFID card before changing status."
+        });
+      }
+      
+      const secondsAgo = parseFloat(rfidCheck.rows[0].seconds_ago);
+      if (secondsAgo > 30) {
+        await client.query("ROLLBACK");
+        return res.status(403).json({ 
+          error: "RFID scan expired",
+          message: `Last scan was ${secondsAgo.toFixed(0)} seconds ago. Please scan your RFID card.`
+        });
+      }
+    }
     
     // Update or insert status
     const update = await client.query(
@@ -445,15 +528,15 @@ app.post("/rfid/scan", async (req, res) => {
       try {
         await client.query("BEGIN");
         
-        // Update user status to Active
+        // Update user status to Busy (default when RFID scanned)
         const upd = await client.query(
           "UPDATE user_status SET status = $1, last_updated = NOW() WHERE faculty_id = $2 RETURNING *",
-          ["Active", faculty.id]
+          ["Busy", faculty.id]
         );
         if (upd.rowCount === 0) {
           await client.query(
             "INSERT INTO user_status (faculty_id, status, last_updated) VALUES ($1,$2,NOW())", 
-            [faculty.id, "Active"]
+            [faculty.id, "Busy"]
           );
         }
 
@@ -721,6 +804,60 @@ app.get("/api/notifications", async (req, res) => {
     res.status(500).json({ error: "Server error" });
   }
 });
+
+// ===============================
+// SCHEDULED JOBS
+// ===============================
+
+/**
+ * Auto-offline job: Set all faculty to Offline at 9:00 PM Philippine Time daily
+ * Runs every minute and checks if it's 9:00 PM
+ */
+cron.schedule('* * * * *', async () => {
+  try {
+    // Get current time in Philippine timezone (Asia/Manila)
+    const now = new Date();
+    const phTime = new Date(now.toLocaleString('en-US', { timeZone: 'Asia/Manila' }));
+    const hour = phTime.getHours();
+    const minute = phTime.getMinutes();
+    
+    // Check if it's exactly 9:00 PM (21:00)
+    if (hour === 21 && minute === 0) {
+      console.log('⏰ Auto-offline: Setting all faculty to Offline at 9:00 PM Philippine time...');
+      
+      const result = await pool.query(
+        `UPDATE user_status 
+         SET status = 'Offline', last_updated = NOW()
+         WHERE status != 'Offline'
+         RETURNING faculty_id`
+      );
+      
+      // Log notification for each faculty that was set to offline
+      if (result.rowCount > 0) {
+        for (const row of result.rows) {
+          try {
+            await pool.query(
+              `INSERT INTO notifications (faculty_id, type, message, created_at) 
+               VALUES ($1, 'auto_offline', 'Status automatically set to Offline at 9:00 PM', NOW())`,
+              [row.faculty_id]
+            );
+          } catch (notifErr) {
+            console.warn('Failed to insert auto-offline notification:', notifErr.message);
+          }
+        }
+        console.log(`✓ Auto-offline: ${result.rowCount} faculty member(s) set to Offline`);
+      } else {
+        console.log('✓ Auto-offline: All faculty already offline');
+      }
+    }
+  } catch (err) {
+    console.error('Error in auto-offline cron job:', err);
+  }
+}, {
+  timezone: 'Asia/Manila'
+});
+
+console.log('✓ Cron job scheduled: Auto-offline at 9:00 PM Philippine time');
 
 // ===============================
 // SERVER STARTUP & SHUTDOWN

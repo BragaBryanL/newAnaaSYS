@@ -7,17 +7,12 @@ import {
   Platform,
   Animated,
   Pressable,
-  Dimensions,
   Image,
-  TouchableOpacity,
 } from "react-native";
 import { NativeStackScreenProps } from "@react-navigation/native-stack";
-import Constants from "expo-constants";
 
 import logo from "../assets/anaa_syslogo.jpg";
 import styles from "../styles/LoginScreenStyles";
-
-const { width } = Dimensions.get("window");
 
 type RootStackParamList = {
   Login: undefined;
@@ -27,7 +22,7 @@ type RootStackParamList = {
 type Props = NativeStackScreenProps<RootStackParamList, "Login">;
 
 // ✅ Use your static IP here
-const API_URL = "http://192.168.0.104:5000";
+const API_URL = "http://192.168.0.103:5000";
 
 export default function LoginScreen({ navigation }: Props) {
   const [username, setUsername] = useState("");
@@ -82,7 +77,8 @@ export default function LoginScreen({ navigation }: Props) {
       }
       // Navigate to Home with faculty info
       navigation.navigate("Home", { faculty: data.faculty });
-    } catch (err) {
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    } catch (_err) {
       setError("Network error. Please try again.");
     }
   };
@@ -155,20 +151,6 @@ export default function LoginScreen({ navigation }: Props) {
             <Text style={styles.buttonText}>Log In</Text>
           </Pressable>
         </Animated.View>
-
-        <TouchableOpacity onPress={() => alert("Forgot password?")}>
-          <Text style={styles.forgotText}>Forgot password?</Text>
-        </TouchableOpacity>
-
-        <Text style={styles.signupText}>
-          Don&apos;t have an account?{" "}
-          <Text
-            style={styles.signupLink}
-            onPress={() => alert("Navigate to Sign Up")}
-          >
-            Sign up
-          </Text>
-        </Text>
       </Animated.View>
     </KeyboardAvoidingView>
   );

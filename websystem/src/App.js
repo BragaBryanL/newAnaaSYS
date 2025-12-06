@@ -4,7 +4,6 @@ import Login from "./pages/login";
 import Home from "./pages/home";
 import Registration from "./pages/registration";
 import Department from "./pages/department";
-import Consultation from "./pages/consultation";
 import Users from "./pages/users";
 
 function App() {
@@ -45,16 +44,6 @@ function App() {
           element={
             isAuthenticated ? (
               <Department facultyList={facultyList} setFacultyList={setFacultyList} />
-            ) : (
-              <Navigate to="/" />
-            )
-          }
-        />
-        <Route
-          path="/consultation"
-          element={
-            isAuthenticated ? (
-              <Consultation facultyList={facultyList} setFacultyList={setFacultyList} />
             ) : (
               <Navigate to="/" />
             )
