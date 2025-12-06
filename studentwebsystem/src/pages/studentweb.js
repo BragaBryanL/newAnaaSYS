@@ -8,6 +8,13 @@ function StudentWeb() {
   const [selectedDept, setSelectedDept] = useState("All");
   const [currentTime, setCurrentTime] = useState(new Date());
 
+  // Set API URL from environment variable (build time)
+  const apiUrl = process.env.REACT_APP_API_URL || "http://localhost:5000";
+  // Debug: log the API URL being used
+  useEffect(() => {
+    console.log("Using API URL:", apiUrl);
+  }, [apiUrl]);
+
   // Update time every second
   useEffect(() => {
     const timer = setInterval(() => {
@@ -26,11 +33,9 @@ function StudentWeb() {
 
   const fetchFaculty = async () => {
     try {
-      const apiUrl = process.env.REACT_APP_API_URL || "http://localhost:5000";
       const response = await fetch(`${apiUrl}/faculty`);
       const data = await response.json();
       setFaculty(data);
-      
       // Extract unique departments
       const depts = ["All", ...new Set(data.map(f => f.department).filter(Boolean))];
       setDepartments(depts);
