@@ -21,7 +21,7 @@ type RootStackParamList = {
 
 type Props = NativeStackScreenProps<RootStackParamList, "Login">;
 
-// ✅ Use your static IP here
+// ✅Static IP here
 const API_URL = "http://192.168.0.103:5000";
 
 export default function LoginScreen({ navigation }: Props) {

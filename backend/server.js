@@ -838,7 +838,7 @@ cron.schedule('* * * * *', async () => {
           try {
             await pool.query(
               `INSERT INTO notifications (faculty_id, type, message, created_at) 
-               VALUES ($1, 'auto_offline', 'Status automatically set to Offline at 9:00 PM', NOW())`,
+               VALUES ($1, 'auto_offline', 'Offline', NOW())`,
               [row.faculty_id]
             );
           } catch (notifErr) {
@@ -862,6 +862,7 @@ console.log('✓ Cron job scheduled: Auto-offline at 9:00 PM Philippine time');
 // ===============================
 // SERVER STARTUP & SHUTDOWN
 // ===============================
+
 
 const PORT = parseInt(process.env.PORT || "5000", 10);
 const server = app.listen(PORT, "0.0.0.0", () => {

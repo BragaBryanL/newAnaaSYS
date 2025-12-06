@@ -9,7 +9,7 @@ function StudentWeb() {
   const [currentTime, setCurrentTime] = useState(new Date());
 
   // Set API URL from environment variable (build time)
-  const apiUrl = process.env.REACT_APP_API_URL || "http://localhost:5000";
+  const apiUrl = "http://localhost:5000";
   // Debug: log the API URL being used
   useEffect(() => {
     console.log("Using API URL:", apiUrl);
