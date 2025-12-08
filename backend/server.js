@@ -841,8 +841,8 @@ cron.schedule('* * * * *', async () => {
                VALUES ($1, 'auto_offline', 'Offline', NOW())`,
               [row.faculty_id]
             );
-          } catch (notifErr) {
-            console.warn('Failed to insert auto-offline notification:', notifErr.message);
+          } catch (notificationErr) {
+            console.warn('Failed to insert auto-offline notification:', notificationErr.message);
           }
         }
         console.log(`✓ Auto-offline: ${result.rowCount} faculty member(s) set to Offline`);
@@ -874,3 +874,4 @@ process.on("SIGINT", () => {
   console.log("Shutting down gracefully...");
   server.close(() => process.exit(0));
 });
+

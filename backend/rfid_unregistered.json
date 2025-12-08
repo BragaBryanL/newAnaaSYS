@@ -1,5 +1,12 @@
 [
   {
+    "id": "1765027565883ugktiv",
+    "tag": "15445",
+    "type": "not_registered",
+    "message": "Unregistered RFID: 15445",
+    "created_at": "2025-12-06T13:26:05.883Z"
+  },
+  {
     "id": "17650261202859ajnr7",
     "tag": "14498",
     "type": "not_registered",
